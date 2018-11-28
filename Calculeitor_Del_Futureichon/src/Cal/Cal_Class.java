@@ -20,17 +20,21 @@ public class Cal_Class {
 			switch(option){
 				case "+":
 					System.out.print("Ingrese un valor para someterlo a operación."+"\n");
-					A = sc.nextInt();
+					A = sc.nextDouble();
 					System.out.println("Ingrese otro valor para continuar la operación.");
-					B = sc.nextInt();
-					System.out.println(A+" + "+B+" = "+(A+B)+"\n");
+					B = sc.nextDouble();
+					String X = new String (""+(A+B));
+					X = String.format("%.10g%n", (A+B));
+					System.out.println(A+" + "+B+" = "+X+"\n");
 					break;
 				case "-":
 					System.out.print("Ingrese un valor para someterlo a operación."+"\n");
 					A = sc.nextDouble();
 					System.out.println("Ingrese otro valor para continuar la operación.");
 					B = sc.nextDouble();
-					System.out.println(A+" - "+B+" = "+(A-B)+"\n");
+					String Y = new String (""+(A-B));
+					X = String.format("%.10g%n", (A-B));
+					System.out.println(A+" - "+B+" = "+Y+"\n");
 					break;
 				case "*":
 					System.out.print("Ingrese un valor para someterlo a operación."+"\n");
@@ -44,7 +48,12 @@ public class Cal_Class {
 					A = sc.nextDouble();
 					System.out.println("Ingrese otro valor para continuar la operación.");
 					B = sc.nextDouble();
+					if (B==0){
+						System.out.println("\nError.\nNo se puede dividir por 0.\n");
+					}
+					else {
 					System.out.println(A+" / "+B+" = "+(Opera.division(A, B))+"\n");
+					}
 					break;
 				case "%":
 					System.out.print("Ingrese un valor para someterlo a operación."+"\n");
