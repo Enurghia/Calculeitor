@@ -13,20 +13,21 @@ public class Prom {
 					+"\n"+"	1) Si."+"\n"+"	2) No."+"\n"+"	3) Atras.");
 			num = sc.next();
 			switch (num) {
-			case "1": Prom_T(); break;
-			case "2": Prom_F(); break;
+			case "1": Prom_True(); break;
+			case "2": Prom_False(); break;
 			case "3": System.out.println(". . .Atras. . ."); aux = false; break;
 			default: System.out.println("Opción no válida."); break;
 			}
 		}
 	}
-	private static void Prom_T () {
+	private static void Prom_True () {
 		sc = new Scanner(System.in);
 		boolean aux = true;
 		System.out.println("Ingrese la cantidad de estudiantes.");
 		int est = sc.nextInt();
+		double [] cantidades = new double [est];
 	}
-	private static void Prom_F () {
+	private static void Prom_False () {
 		sc = new Scanner(System.in);
 		boolean aux = true;
 		String num = new String ("");
@@ -34,12 +35,17 @@ public class Prom {
 		"\n"+"Una vez acabe de ingresar notas, escriba [END] y presione [ENTER]."
 		+"\n");
 		while(aux == true){
-			
 			num = sc.next();
 			num = num.toUpperCase();
 			if (num.equals("END")) {
 				aux = false;
 			}
 		}
+	}
+	private static void Prom_Know () {
+		
+	}
+	private static void Prom_Unknow () {
+		
 	}
 }
