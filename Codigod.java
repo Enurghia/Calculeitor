@@ -16,13 +16,13 @@ public class Codigod {
 		int c3 = 0;
 		int [] aux1 = new int [25];
 		int [] aux2 = new int [100];
-		int [] aux3 = new int [10];
+		int aux3 = 1;
 		for(c1 = 0; c1 < 10; c1++) {
 			for(c2 = 0; c2 < 100; c2++){
 				for(c3 = 0; c3 < 25; c3++){
 					System.out.print("Ingrese la cantidad de notas de los estudiantes."
 					+"\n"+"Una vez acabe de ingresar notas, escriba [END]"
-					+ " y presione [ENTER]"+"\n"+"Lleva "+aux1+" de 25"
+					+ " y presione [ENTER]"+"\n"+"Lleva "+aux1[c2]+" de 25"
 					+ " notas ingresados."+"\n");
 					num = sc.next();
 					num = num.toUpperCase();
@@ -37,13 +37,13 @@ public class Codigod {
 						}
 						else {
 							Promedios[c1][c2][c3] = numero;
-							aux1[c3] += 1;
+							aux1[c2] += 1;
 						}
 					}
 				}
 				System.out.println("Si acabó de ingresar estudiantes, escriba [END]"
 				+ " y presione [ENTER]"+"\n"+"Si no ha acabado, ingrese cualquier"
-				+ " caracter y presione [ENTER]"+"\n"+"Lleva "+aux2+" de 100"
+				+ " caracter y presione [ENTER]"+"\n"+"Lleva "+(aux2[c1]+1)+" de 100"
 				+ " estudiantes."+"\n");
 				num = sc.next();
 				num = num.toUpperCase();
@@ -51,7 +51,7 @@ public class Codigod {
 					break;
 				}
 				else {
-					aux2[c2] += 1;
+					aux2[c1] += 1;
 				}
 			}
 			System.out.println("Una vez acabe de ingresar el curso, escriba [END]"
@@ -64,15 +64,9 @@ public class Codigod {
 				break;
 			}
 			else {
-				aux3[c1] += 1;
+				aux3++;
 			}
 		}
-		for(c1 = 0; c1 < aux3[c1]; c1++) {
-			for(c2 = 0; c2 < aux2[c2]; c2++) {
-				for(c3 = 0; c3 < aux1[c3]; c3++) {
-					System.out.println(Promedios[c1][c2][c3]);
-				}
-			}
-		}
+		
 	}
 }
