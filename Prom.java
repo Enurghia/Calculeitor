@@ -44,7 +44,13 @@ public class Prom {
 			default: break;
 			}
 		}
-		double resultado = Double.valueOf(arreglar);
-		return resultado;
+		if(arreglar.isEmpty()) {
+			double resultado = 0;
+			return resultado;
+		}
+		else {
+			double resultado = Double.valueOf(arreglar);
+			return resultado;
+		}
 	}
 }
