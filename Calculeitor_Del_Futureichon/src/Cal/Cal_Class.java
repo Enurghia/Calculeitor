@@ -20,17 +20,21 @@ public class Cal_Class {
 			switch(option){
 				case "+":
 					System.out.print("Ingrese un valor para someterlo a operación."+"\n");
-					A = sc.nextInt();
+					A = sc.nextDouble();
 					System.out.println("Ingrese otro valor para continuar la operación.");
-					B = sc.nextInt();
-					System.out.println(A+" + "+B+" = "+(A+B)+"\n");
+					B = sc.nextDouble();
+					String X = new String (""+(A+B));
+					X = String.format("%.10g%n", (A+B));
+					System.out.println(A+" + "+B+" = "+X+"\n");
 					break;
 				case "-":
 					System.out.print("Ingrese un valor para someterlo a operación."+"\n");
 					A = sc.nextDouble();
 					System.out.println("Ingrese otro valor para continuar la operación.");
 					B = sc.nextDouble();
-					System.out.println(A+" - "+B+" = "+(A-B)+"\n");
+					String Y = new String (""+(A-B));
+					X = String.format("%.10g%n", (A-B));
+					System.out.println(A+" - "+B+" = "+Y+"\n");
 					break;
 				case "*":
 					System.out.print("Ingrese un valor para someterlo a operación."+"\n");
@@ -44,7 +48,12 @@ public class Cal_Class {
 					A = sc.nextDouble();
 					System.out.println("Ingrese otro valor para continuar la operación.");
 					B = sc.nextDouble();
+					if (B==0){
+						System.out.println("\nError.\nNo se puede dividir por 0.\n");
+					}
+					else {
 					System.out.println(A+" / "+B+" = "+(Opera.division(A, B))+"\n");
+					}
 					break;
 				case "%":
 					System.out.print("Ingrese un valor para someterlo a operación."+"\n");
@@ -184,7 +193,76 @@ public class Cal_Class {
 	public static void cal_Prom () {
 		Scanner sc = new Scanner(System.in);
 	}
-	public static void cal_Dat () {
+	public static void cal_Ord () {
 		Scanner sc = new Scanner(System.in);
+		String option = new String ();
+		double A = 0;
+		boolean Aux = true;
+		System.out.print("Ordenamiento de datos. . . "+"\n");
+		while (Aux == true) {
+			System.out.print("Ingrese la operación."+"\n"
+					+"	1) Ordenamiento de números"+" ingresados."+"\n"
+					+"	2) Ordenamiento de letras ingresadas."+"\n"
+					+"	3) Ordenamiento de números aleatorios."+"\n"
+					+"	4) Ordenamiento de letras aleatorias."+"\n"
+					+"Ingrese [0] y pulse [ENTER] para"
+					+ " retroceder."+"\n");
+			option = sc.next();
+			switch(option){
+				case "+":
+					System.out.print("Ingrese un valor para someterlo a operación."+"\n");
+					A = sc.nextDouble();
+					System.out.println("Ingrese otro valor para continuar la operación.");
+					B = sc.nextDouble();
+					String X = new String (""+(A+B));
+					X = String.format("%.10g%n", (A+B));
+					System.out.println(A+" + "+B+" = "+X+"\n");
+					break;
+				case "-":
+					System.out.print("Ingrese un valor para someterlo a operación."+"\n");
+					A = sc.nextDouble();
+					System.out.println("Ingrese otro valor para continuar la operación.");
+					B = sc.nextDouble();
+					String Y = new String (""+(A-B));
+					X = String.format("%.10g%n", (A-B));
+					System.out.println(A+" - "+B+" = "+Y+"\n");
+					break;
+				case "*":
+					System.out.print("Ingrese un valor para someterlo a operación."+"\n");
+					A = sc.nextDouble();
+					System.out.println("Ingrese otro valor para continuar la operación.");
+					B = sc.nextDouble();
+					System.out.println(A+" * "+B+" = "+(Opera.multiply(A, B))+"\n");
+					break;
+				case "/":
+					System.out.print("Ingrese un valor para someterlo a operación."+"\n");
+					A = sc.nextDouble();
+					System.out.println("Ingrese otro valor para continuar la operación.");
+					B = sc.nextDouble();
+					if (B==0){
+						System.out.println("\nError.\nNo se puede dividir por 0.\n");
+					}
+					else {
+					System.out.println(A+" / "+B+" = "+(Opera.division(A, B))+"\n");
+					}
+					break;
+				case "%":
+					System.out.print("Ingrese un valor para someterlo a operación."+"\n");
+					A = sc.nextDouble();
+					System.out.println("Ingrese otro valor para continuar la operación.");
+					B = sc.nextDouble();
+					System.out.println(A+" % "+B+" = "+(Opera.divMod(A, B))+"\n");
+					break;
+				case "^":
+					System.out.print("Ingrese un valor para someterlo a operación."+"\n");
+					A = sc.nextDouble();
+					System.out.println("Ingrese otro valor para continuar la operación.");
+					B = sc.nextDouble();
+					System.out.println(A+" ^ "+B+" = "+(Opera.power(A, B))+"\n");
+					break;
+				case "0": System.out.println(". . . Atras . . ."+"\n"); Aux = false;break;
+				default: System.out.println("Dato inválido, inténtelo otra vez."+"\n");break;
+			}
+		}
 	}
 }
