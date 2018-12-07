@@ -2,28 +2,13 @@ package Cal;
 import java.util.Scanner;
 public class Prom {
 	private static Scanner sc;
-	public static void Promedios () {
-		sc = new Scanner(System.in);
-		boolean aux = true;
-		String num = new String ("");
-		while (aux == true) {
-			System.out.print("¿Se tiene una cantidad fija de cursos,"
-					+ " estudiantes y notas?"
-					+"\n"+"	1) Si."+"\n"+"	2) No."+"\n"+"	3) Atras."+"\n");
-			num = sc.next();
-			switch (num) {
-			case "1": Prom_True(); break;
-			case "2": Prom_False(); break;
-			case "3": System.out.println(". . . Atras . . ."); aux = false; break;
-			default: System.out.println("Opción no válida."); break;
-			}
+	public static double Prom (double [] Promedio) {
+		double acumular = 0;
+		for (int i = 0; i < Promedio.length; i++) {
+			acumular += Promedio[i];
 		}
-	}
-	private static void Prom_True () {
-		sc = new Scanner(System.in);
-	}
-	private static void Prom_False () {
-		sc = new Scanner(System.in);
+		double resultado = (Opera.division(acumular, Promedio.length));
+		return resultado;
 	}
 	public static double Delta (String valor) {
 		String arreglar = new String ("");

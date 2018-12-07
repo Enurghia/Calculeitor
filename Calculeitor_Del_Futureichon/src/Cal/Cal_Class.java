@@ -217,12 +217,10 @@ public class Cal_Class {
 				case "1":
 					System.out.print("Desea ordenar de manera ascendente"
 								+ " o desendente?"+"\n"
-								+ "	0) Atras."+"\n"
 								+ "	1) Ascendente."+"\n"
 								+ "	2) Desendente."+"\n");
 					option = sc.next();
 					switch(option){
-					case "0": System.out.println(". . . Atras . . ."+"\n"); Aux = false; break;
 					case "1":
 						for(i = 0; i < B.length; i++) {
 							System.out.print("Ingrese valores para ordenar."+"\n"
@@ -273,12 +271,10 @@ public class Cal_Class {
 				case "2":
 					System.out.print("Desea ordenar de manera ascendente"
 								+ " o desendente?"+"\n"
-								+ "	0) Atras."+"\n"
 								+ "	1) Ascendente."+"\n"
 								+ "	2) Desendente."+"\n");
 					option = sc.next();
 					switch(option){
-					case "0": System.out.println(". . . Atras . . ."+"\n"); Aux = false; break;
 					case "1":
 						System.out.print("Ingrese una palabra o una frase."
 						+" sin utilizar [ESPACIO]"+"\n"
@@ -303,17 +299,16 @@ public class Cal_Class {
 						j++;
 						C.MaxMinChar(A);
 						break;
+					default:System.out.println("Dato inválido, inténtelo otra vez."+"\n"); break;
 					}
 					break;
 				case "3":
 					System.out.print("Desea ordenar de manera ascendente"
 								+ " o desendente?"+"\n"
-								+ "	0) Atras."+"\n"
 								+ "	1) Ascendente."+"\n"
 								+ "	2) Desendente."+"\n");
 					option = sc.next();
 					switch(option){
-					case "0": System.out.println(". . . Atras . . ."+"\n"); Aux = false; break;
 					case "1":
 						System.out.print("Ingrese la cantidad de valores a ordenar (Entre 0 y 255)"
 							+" y pulse [ENTER]"+"\n"
@@ -323,7 +318,7 @@ public class Cal_Class {
 							j = 0;
 						}
 						for(i = 0; i < j; i++) {
-							B[i] = Math.random()*1024;
+							B[i] = Opera.multiply(Math.random(), 1024);
 						}
 						C.MinMax(B);
 						for(i = 0; i < j; i++) {
@@ -340,7 +335,7 @@ public class Cal_Class {
 							j = 0;
 						}
 						for(i = 0; i < j; i++) {
-							B[i] = Math.random()*1024;
+							B[i] = Opera.multiply(Math.random(), 1024);
 						}
 						C.MaxMin(B);
 						for(i = 0; i < j; i++) {
@@ -348,17 +343,16 @@ public class Cal_Class {
 						}
 						System.out.println("\n");
 						break;
+					default:System.out.println("Dato inválido, inténtelo otra vez."+"\n"); break;
 					}
 					break;
 				case "4":
 					System.out.print("Desea ordenar de manera ascendente"
 								+ " o desendente?"+"\n"
-								+ "	0) Atras."+"\n"
 								+ "	1) Ascendente."+"\n"
 								+ "	2) Desendente."+"\n");
 					option = sc.next();
 					switch(option){
-					case "0": System.out.println(". . . Atras . . ."+"\n"); Aux = false; break;
 					case "1":
 						System.out.print("Ingrese la cantidad de letras a ordenar"
 							+" y pulse [ENTER]"+"\n"
@@ -368,7 +362,7 @@ public class Cal_Class {
 							j = 0;
 						}
 						for(i = 0; i < j; i++) {
-							B[i] = Math.random()*28;
+							B[i] = Opera.multiply(Math.random(), 28);
 						}
 						C.MinMaxIntChar(B);
 						break;
@@ -381,10 +375,11 @@ public class Cal_Class {
 							j = 0;
 						}
 						for(i = 0; i < j; i++) {
-							B[i] = Math.random()*28;
+							B[i] = Opera.multiply(Math.random(), 28);
 						}
 						C.MaxMinIntChar(B);
 						break;
+					default:System.out.println("Dato inválido, inténtelo otra vez."+"\n"); break;
 					}
 					break;
 				case "0": System.out.println(". . . Atras . . ."+"\n");
