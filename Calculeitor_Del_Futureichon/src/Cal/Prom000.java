@@ -1,6 +1,6 @@
 package Cal;
 import java.util.Scanner;
-public class Prom {
+public class Prom000 {
 	private static Scanner sc;
 	public static void Promedios () {
 		sc = new Scanner(System.in);
@@ -49,7 +49,7 @@ public class Prom {
 			return resultado;
 		}
 		else {
-			double resultado = Double.valueOf(("0"+arreglar));
+			double resultado = Double.valueOf(arreglar);
 			return resultado;
 		}
 	}

@@ -18,7 +18,7 @@ public class Calculadora {
 			case "1": Cal_Class.cal_Aritm();break;
 			case "2": Cal_Class.cal_Bin();break;
 			case "3": Cal_Class.cal_Prom();break;
-			case "4": Cal_Class.cal_Dat();break;
+			case "4": Cal_Class.cal_Ord();break;
 			case "0": System.out.println(". . . CERRANDO . . ."); System.exit(0);break;
 			default: System.out.println("Dato inválido, inténtelo otra vez.");break;
 			}
