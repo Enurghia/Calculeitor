@@ -1,9 +1,9 @@
 package Cal;
-import java.util.Scanner;
-
+import java.util.*;
 public class Cal_Class {
+	private static Scanner sc;
 	public static void cal_Aritm (){
-		Scanner sc = new Scanner(System.in);
+		sc = new Scanner(System.in);
 		double A = 0;
 		double B = 0;
 		String option = new String ();
@@ -75,7 +75,7 @@ public class Cal_Class {
 		}
 	}
 	public static void cal_Bin () {
-		Scanner sc = new Scanner(System.in);
+		sc = new Scanner(System.in);
 		int A1 = 0;
 		int B1 = 0;
 		String A2 = new String ("");
@@ -191,10 +191,10 @@ public class Cal_Class {
 		}
 	}
 	public static void cal_Prom () {
-		Scanner sc = new Scanner(System.in);
+		sc = new Scanner(System.in);
 	}
 	public static void cal_Ord () {
-		Scanner sc = new Scanner(System.in);
+		sc = new Scanner(System.in);
 		String option = new String ();
 		String A = new String("");
 		int i;

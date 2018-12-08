@@ -1,8 +1,6 @@
 package Cal;
-import java.util.Scanner;
 public class Prom {
-	private static Scanner sc;
-	public static double Prom (double [] Promedio) {
+	public static double Promedio (double [] Promedio) {
 		double acumular = 0;
 		for (int i = 0; i < Promedio.length; i++) {
 			acumular += Promedio[i];
