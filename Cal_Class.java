@@ -6,6 +6,8 @@ public class Cal_Class {
 		sc = new Scanner(System.in);
 		double A = 0;
 		double B = 0;
+		String A1 = new String ();
+		String B1 = new String ();
 		String option = new String ();
 		boolean Aux = true;
 		System.out.print("Calculadora aritmética. . . "+"\n");
@@ -19,35 +21,43 @@ public class Cal_Class {
 			option = sc.next();
 			switch(option){
 				case "+":
-					System.out.print("Ingrese un valor para someterlo a operación."+"\n");
-					A = sc.nextDouble();
-					System.out.println("Ingrese otro valor para continuar la operación.");
-					B = sc.nextDouble();
+					System.out.print("Ingrese un valor para someterlo a operación (Letras serán ignoradas)."+"\n");
+					A1 = sc.next();
+					A = Prom.Delta(A1);
+					System.out.println("Ingrese otro valor para continuar la operación (Letras serán ignoradas).");
+					B1 = sc.next();
+					B = Prom.Delta(B1);
 					String X = new String (""+(A+B));
 					X = String.format("%.10g%n", (A+B));
 					System.out.println(A+" + "+B+" = "+X+"\n");
 					break;
 				case "-":
-					System.out.print("Ingrese un valor para someterlo a operación."+"\n");
-					A = sc.nextDouble();
-					System.out.println("Ingrese otro valor para continuar la operación.");
-					B = sc.nextDouble();
+					System.out.print("Ingrese un valor para someterlo a operación (Letras serán ignoradas)."+"\n");
+					A1 = sc.next();
+					A = Prom.Delta(A1);
+					System.out.println("Ingrese otro valor para continuar la operación (Letras serán ignoradas).");
+					B1 = sc.next();
+					B = Prom.Delta(B1);
 					String Y = new String (""+(A-B));
 					X = String.format("%.10g%n", (A-B));
 					System.out.println(A+" - "+B+" = "+Y+"\n");
 					break;
 				case "*":
-					System.out.print("Ingrese un valor para someterlo a operación."+"\n");
-					A = sc.nextDouble();
-					System.out.println("Ingrese otro valor para continuar la operación.");
-					B = sc.nextDouble();
+					System.out.print("Ingrese un valor para someterlo a operación (Letras serán ignoradas)."+"\n");
+					A1 = sc.next();
+					A = Prom.Delta(A1);
+					System.out.println("Ingrese otro valor para continuar la operación (Letras serán ignoradas).");
+					B1 = sc.next();
+					B = Prom.Delta(B1);
 					System.out.println(A+" * "+B+" = "+(Opera.multiply(A, B))+"\n");
 					break;
 				case "/":
-					System.out.print("Ingrese un valor para someterlo a operación."+"\n");
-					A = sc.nextDouble();
-					System.out.println("Ingrese otro valor para continuar la operación.");
-					B = sc.nextDouble();
+					System.out.print("Ingrese un valor para someterlo a operación (Letras serán ignoradas)."+"\n");
+					A1 = sc.next();
+					A = Prom.Delta(A1);
+					System.out.println("Ingrese otro valor para continuar la operación (Letras serán ignoradas).");
+					B1 = sc.next();
+					B = Prom.Delta(B1);
 					if (B==0){
 						System.out.println("\nError.\nNo se puede dividir por 0.\n");
 					}
@@ -56,17 +66,21 @@ public class Cal_Class {
 					}
 					break;
 				case "%":
-					System.out.print("Ingrese un valor para someterlo a operación."+"\n");
-					A = sc.nextDouble();
-					System.out.println("Ingrese otro valor para continuar la operación.");
-					B = sc.nextDouble();
+					System.out.print("Ingrese un valor para someterlo a operación (Letras serán ignoradas)."+"\n");
+					A1 = sc.next();
+					A = Prom.Delta(A1);
+					System.out.println("Ingrese otro valor para continuar la operación (Letras serán ignoradas).");
+					B1 = sc.next();
+					B = Prom.Delta(B1);
 					System.out.println(A+" % "+B+" = "+(Opera.divMod(A, B))+"\n");
 					break;
 				case "^":
-					System.out.print("Ingrese un valor para someterlo a operación."+"\n");
-					A = sc.nextDouble();
-					System.out.println("Ingrese otro valor para continuar la operación.");
-					B = sc.nextDouble();
+					System.out.print("Ingrese un valor para someterlo a operación (Letras serán ignoradas)."+"\n");
+					A1 = sc.next();
+					A = Prom.Delta(A1);
+					System.out.println("Ingrese otro valor para continuar la operación (Letras serán ignoradas).");
+					B1 = sc.next();
+					B = Prom.Delta(B1);
 					System.out.println(A+" ^ "+B+" = "+(Opera.power(A, B))+"\n");
 					break;
 				case "0": System.out.println(". . . Atras . . ."+"\n"); Aux = false;break;

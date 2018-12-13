@@ -5,11 +5,11 @@ public class Prom {
 		for (int i = 0; i < Cantidad; i++) {
 			acumular += Promedio[i];
 		}
-		double resultado = (acumular/Cantidad);
+		double resultado = (Opera.division(acumular, Cantidad));
 		return resultado;
 	}
 	public static double PromedioAc (double acumular, int Cantidad) {
-		double resultado = (acumular/Cantidad);
+		double resultado = (Opera.division(acumular, Cantidad));
 		return resultado;
 	}
 	public static double Delta (String valor) {
